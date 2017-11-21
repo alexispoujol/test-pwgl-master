@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  * DAO for the {@link Actuator} entity
- * @author A Crepet
+ * @author A  Crepet
  */
 public interface ActuatorDao extends JpaRepository<Actuator, Long> {
 }
