@@ -5,11 +5,12 @@ import javax.persistence.*;
 @Entity
 @SuppressWarnings("serial")
 public class Actuator {
-
+    @Id
+    @GeneratedValue
     private Long id;
-
+    @Column
     private Integer speed;
-
+    @Enumerated(EnumType.STRING)
     private Status status;
 
     public Actuator(Integer speed, Status status) {
@@ -25,7 +26,6 @@ public class Actuator {
     public void setId(Long id) {
         this.id = id;
     }
-
 
     public Integer getSpeed() {
         return speed;

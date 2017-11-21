@@ -9,6 +9,11 @@ import javax.transaction.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
+
+@RestController
+@RequestMapping(value = "/api/robots")
+@Transactional
 public class RobotController {
 
     private final RobotDao robotDao;
@@ -20,11 +25,15 @@ public class RobotController {
 
     @GetMapping
     public List<RobotDto> list() {
-        return robotDao.findAll()
-                .stream()
-                .map(RobotDto::new)
-                .collect(Collectors.toList());
+        return robotDao.findAll().stream().map(RobotDto::new).collect(Collectors.toList());
     }
+
+
+
+
+
+
+
 
     @GetMapping(value={"/{robotId}","/{robotId}/context"})
     public RobotDto get(@PathVariable("robotId") Long robotId) {

@@ -8,6 +8,6 @@ import java.util.List;
  * @author A Crepet
  */
 public interface SensorDaoCustom {
-    public List<Sensor> findOnSensors();
+    List<Sensor> findOnSensors();
 
 }

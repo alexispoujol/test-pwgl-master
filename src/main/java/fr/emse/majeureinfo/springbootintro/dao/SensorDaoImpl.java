@@ -21,8 +21,7 @@ public class SensorDaoImpl implements SensorDaoCustom {
     public List<Sensor> findOnSensors() {
         String jpql = "select lt from Sensor lt where lt.status = :value";
         TypedQuery<Sensor> query = em.createQuery(jpql, Sensor.class);
-        return query.setParameter("value", Status.ON)
-                .getResultList();
+        return query.setParameter("value", Status.ON).getResultList();
     }
 
 }

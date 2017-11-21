@@ -9,6 +9,6 @@ import java.util.List;
  * @author A Crepet
  */
 public interface RobotDaoCustom {
-    public List<Robot> findWithOnSensors();
+    List<Robot> findWithOnSensors();
 }
 

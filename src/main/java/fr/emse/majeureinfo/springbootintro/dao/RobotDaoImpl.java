@@ -21,8 +21,7 @@ public class RobotDaoImpl implements RobotDaoCustom {
     public List<Robot> findWithOnSensors() {
         String jpql = "select ro from Robot ro where ro.sensor.status = :value";
         TypedQuery<Robot> query = em.createQuery(jpql, Robot.class);
-        return query.setParameter("value", Status.ON)
-                .getResultList();
+        return query.setParameter("value", Status.ON).getResultList();
     }
 
 }
